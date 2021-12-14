@@ -1,0 +1,27 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  #    networks:
+  #      - my_network
+  node-app:
+    build: .
+    ports:
+      - '8080:8080'
+
+#    networks:
+#      - my_network
+
+#networks:
+#  my_network:
+
+
+
+# FOR OLD version: '2'
+#    driver: bridge
+#    config:
+#      - ip-range: 172.16.0.0/161
+#    ipam:
+#      config:
+#        - subnet: 172.16.0.0/16
+#          gateway: 172.16.0.1
